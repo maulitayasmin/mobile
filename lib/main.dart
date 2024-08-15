@@ -16,9 +16,16 @@ class LitaApp extends StatelessWidget {
           centerTitle: true, //karena di android centerTitle nya false jadi harus di setting dulu menjadi true
         ),
         body: Center(
-          child: FlutterLogo( //menghasilkan output gambar flutter
-            size: 200,
-          ),
+          child: ElevatedButton(
+            onPressed: () {
+              print('Klik'); //menjalankan sebuah perintah fungsi sehingga nanti di debug console muncul berapa kali kita klik
+            },
+            style: ElevatedButton.styleFrom( 
+              backgroundColor: Colors.green, //memberikan warna pada button
+              foregroundColor: Colors.white, //memberikan warna pada tulisan
+            ), 
+            child: Text('Klik Saya'),
+          )
         )
       )
     );
