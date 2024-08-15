@@ -16,13 +16,8 @@ class LitaApp extends StatelessWidget {
           centerTitle: true, //karena di android centerTitle nya false jadi harus di setting dulu menjadi true
         ),
         body: Center(
-          child: Container( //membuat kotak
-            width: 200, //mengatur lebar kotak
-            height: 200, //mengatur tinggi kotak
-            color: Colors.amber, //mewarnai kotak
-            child: Center(
-              child: Text('Hello World'), //mengisi kotak dengan tulisan
-            )
+          child: FlutterLogo( //menghasilkan output gambar flutter
+            size: 200,
           ),
         )
       )
