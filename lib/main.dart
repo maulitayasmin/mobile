@@ -9,10 +9,12 @@ class LitaApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false, //menghilangkan debug
       home: Scaffold(
         appBar: AppBar( //mengedit pada bagian atas
           title: Text('Aplikasi Lita'),
           backgroundColor: const Color.fromARGB(255, 80, 159, 82),
+          foregroundColor: Colors.white,
           centerTitle: true, //karena di android centerTitle nya false jadi harus di setting dulu menjadi true
         ),
         body: Center(
