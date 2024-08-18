@@ -14,8 +14,13 @@ class LitaApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Lita App'),
         ),
-        body: Center( //center sebagai widget invisible (Layouting Widget)
-          child: Text('Judul'),
+        body: Container(
+          width: 100,
+          height: 100,
+          color: Colors.amber, //Memberikan wara pada container sehingga bisa disebut widget visible
+          child: Center(
+            child: Text('Hai')
+          ),
         ),
       ),
     );
