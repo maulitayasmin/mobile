@@ -17,50 +17,22 @@ class LitaApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Stack(
-          alignment: AlignmentDirectional.bottomCenter,
+        body: GridView( //otomatis bisa scroll
+          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2 //menyesuaikan jumlah kotak
+          ),
           children: [
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber, // Memberikan warna pada container
-              child: Center(
-                child: Text(
-                  'Hai',
-                  style: TextStyle(
-                    color: Colors.white, // Mengubah warna teks menjadi putih
-                  ),
-                ),
-              ),
+            Container( //jika container dikasi ukuran tidak ngefek
+              color: Colors.amber,
             ),
             Container(
-              width: 75,
-              height: 75,
-              color: Colors.green, // Memberikan warna pada container
-              child: Center(
-                child: Text(
-                  'Hai',
-                  style: TextStyle(
-                    color: Colors.white, // Mengubah warna teks menjadi putih
-                  ),
-                ),
-              ),
+              color: Colors.red,
             ),
             Container(
-              width: 50,
-              height: 50,
-              color: Colors.red, // Memberikan warna pada container
-              child: Center(
-                child: Text(
-                  'Hai',
-                  style: TextStyle(
-                    color: Colors.white, // Mengubah warna teks menjadi putih
-                  ),
-                ),
-              ),
-            ),
+              color: Colors.green,
+            )
           ],
-        ),
+        )
       ),
     );
   }
