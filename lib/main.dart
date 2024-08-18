@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(LitaApp());
 }
 
@@ -13,18 +13,18 @@ class LitaApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text('Lita App')
-            ),
-          foregroundColor: Colors.white,
+            child: Text('Lita App'),
+          ),
           backgroundColor: Colors.blue,
         ),
-        body: ListView( //semua anak di listview ukurannya mengikuti kemana listview mengaksesnya
-        scrollDirection: Axis.horizontal, //scroll menjadi kesamping
-        children: [
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.start, // bawah, ctrl+spasi
+          crossAxisAlignment: CrossAxisAlignment.start, //samping
+          children: [
             Container(
               width: 100,
               height: 100,
-              color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
+              color: Colors.amber, // Memberikan warna pada container
               child: Center(
                 child: Text(
                   'Hai',
@@ -34,27 +34,10 @@ class LitaApp extends StatelessWidget {
                 ),
               ),
             ),
-        
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
+            Container(
               width: 100,
               height: 100,
-              color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
+              color: Colors.green, // Memberikan warna pada container
               child: Center(
                 child: Text(
                   'Hai',
@@ -64,27 +47,10 @@ class LitaApp extends StatelessWidget {
                 ),
               ),
             ),
-        
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
+            Container(
               width: 100,
               height: 100,
-              color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
+              color: Colors.red, // Memberikan warna pada container
               child: Center(
                 child: Text(
                   'Hai',
@@ -94,115 +60,8 @@ class LitaApp extends StatelessWidget {
                 ),
               ),
             ),
-        
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
-              child: Center(
-                child: Text(
-                  'Hai',
-                  style: TextStyle(
-                    color: Colors.white, // Mengubah warna teks menjadi putih
-                  ),
-                ),
-              ),
-            ),
-        
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
-              child: Center(
-                child: Text(
-                  'Hai',
-                  style: TextStyle(
-                    color: Colors.white, // Mengubah warna teks menjadi putih
-                  ),
-                ),
-              ),
-            ),
-        
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-              width: 100,
-              height: 100,
-              color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
-              child: Center(
-                child: Text(
-                  'Hai',
-                  style: TextStyle(
-                    color: Colors.white, // Mengubah warna teks menjadi putih
-                  ),
-                ),
-              ),
-            ),
-        
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-          Container(
-            width: 100,
-            height: 100,
-            color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
-            child: Center(
-              child: Text('Hai')
-            ),
-          ),
-        ],
-                )
+          ],
+        ),
       ),
     );
   }
