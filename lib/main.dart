@@ -18,8 +18,8 @@ class LitaApp extends StatelessWidget {
           backgroundColor: Colors.blue,
         ),
         body: GridView( //otomatis bisa scroll
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2 //menyesuaikan jumlah kotak
+          gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+            maxCrossAxisExtent: 200 //menyesuaikan ukuran device, besar max ukuran kotaknya adalah 200
           ),
           children: [
             Container( //jika container dikasi ukuran tidak ngefek
