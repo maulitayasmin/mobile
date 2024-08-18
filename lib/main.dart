@@ -18,7 +18,7 @@ class LitaApp extends StatelessWidget {
           foregroundColor: Colors.white,
           backgroundColor: Colors.blue,
         ),
-        body: ListView( 
+        body: ListView( //semua anak di listview ukurannya mengikuti kemana listview mengaksesnya
         scrollDirection: Axis.horizontal, //scroll menjadi kesamping
         children: [
             Container(
