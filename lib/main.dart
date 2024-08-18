@@ -18,7 +18,7 @@ class LitaApp extends StatelessWidget {
           foregroundColor: Colors.white,
           backgroundColor: Colors.blue,
         ),
-        body: Column( //digunakan untuk menampung lebih dari 1 widget
+        body: Row( //digunakan untuk menampung lebih dari 1 widget
           children: [
               Container(
                 width: 100,
