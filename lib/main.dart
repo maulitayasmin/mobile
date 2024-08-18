@@ -18,7 +18,7 @@ class LitaApp extends StatelessWidget {
           foregroundColor: Colors.white,
           backgroundColor: Colors.blue,
         ),
-        body: Row( //digunakan untuk menampung lebih dari 1 widget
+        body: Stack( //digunakan untuk menumpuk, jadi outputnya yang keluar adalah kotak terakhir
           children: [
               Container(
                 width: 100,
