@@ -12,15 +12,45 @@ class LitaApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Lita App'),
+          title: Center(
+            child: Text('Lita App')
+            ),
+          foregroundColor: Colors.white,
+          backgroundColor: Colors.blue,
         ),
-        body: Container(
-          width: 100,
-          height: 100,
-          color: Colors.amber, //Memberikan wara pada container sehingga bisa disebut widget visible
-          child: Center(
-            child: Text('Hai')
-          ),
+        body: Column( //digunakan untuk menampung lebih dari 1 widget
+          children: [
+              Container(
+                width: 100,
+                height: 100,
+                color: Colors.amber, // Memberikan warna pada container sehingga bisa disebut widget visible
+                child: Center(
+                  child: Text(
+                    'Hai',
+                    style: TextStyle(
+                      color: Colors.white, // Mengubah warna teks menjadi putih
+                    ),
+                  ),
+                ),
+              ),
+
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.green, //Memberikan wara pada container sehingga bisa disebut widget visible
+              child: Center(
+                child: Text('Hai')
+              ),
+            ),
+            Container(
+              width: 100,
+              height: 100,
+              color: Colors.red, //Memberikan wara pada container sehingga bisa disebut widget visible
+              child: Center(
+                child: Text('Hai')
+              ),
+            ),
+          ],
         ),
       ),
     );
