@@ -17,9 +17,8 @@ class LitaApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start, // bawah, ctrl+spasi
-          crossAxisAlignment: CrossAxisAlignment.start, //samping
+        body: Stack(
+          alignment: AlignmentDirectional.bottomCenter,
           children: [
             Container(
               width: 100,
@@ -35,8 +34,8 @@ class LitaApp extends StatelessWidget {
               ),
             ),
             Container(
-              width: 100,
-              height: 100,
+              width: 75,
+              height: 75,
               color: Colors.green, // Memberikan warna pada container
               child: Center(
                 child: Text(
@@ -48,8 +47,8 @@ class LitaApp extends StatelessWidget {
               ),
             ),
             Container(
-              width: 100,
-              height: 100,
+              width: 50,
+              height: 50,
               color: Colors.red, // Memberikan warna pada container
               child: Center(
                 child: Text(
