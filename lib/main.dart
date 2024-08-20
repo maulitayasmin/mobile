@@ -22,6 +22,17 @@ class LitaApp extends StatelessWidget {
     ),
 );
 
+  List<Map<String, dynamic>> data = [
+    {
+      'nama' : 'Merah',
+      'warna' : Colors.red
+    },
+    {
+      'nama' : 'Hijau',
+      'warna' : Colors.green
+    },
+  ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
