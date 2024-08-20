@@ -5,7 +5,13 @@ void main(){
 }
 
 class LitaApp extends StatelessWidget {
-  const LitaApp({super.key});
+  LitaApp({super.key});
+
+  List<KotakWarna> allitems = List.generate(10,
+   (index) => KotakWarna(
+    nama: 'Merah', 
+    warna: Colors.red,),
+);
 
   @override
   Widget build(BuildContext context) {
@@ -20,12 +26,13 @@ class LitaApp extends StatelessWidget {
         body: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Column(
-            children: [
-              KotakWarna(nama: 'Merah', warna: Colors.red,),
-              KotakWarna(nama: 'Kuning', warna: Colors.amber,),
-              KotakWarna(nama: 'Hijau', warna: Colors.green,),
-              KotakWarna(nama: 'Abu-abu', warna: Colors.grey,),
-              KotakWarna(nama: 'Pink', warna: Colors.pink,),
+            children: 
+              allitems,
+              // KotakWarna(nama: 'Merah', warna: Colors.red,),
+              // KotakWarna(nama: 'Kuning', warna: Colors.amber,),
+              // KotakWarna(nama: 'Hijau', warna: Colors.green,),
+              // KotakWarna(nama: 'Abu-abu', warna: Colors.grey,),
+              // KotakWarna(nama: 'Pink', warna: Colors.pink,),
 
               // Container(
               //   width: 200,
@@ -67,7 +74,6 @@ class LitaApp extends StatelessWidget {
               //     child: Text('Hijau')
               //   ),
               // )
-            ],
           ),
         ),
       ),
