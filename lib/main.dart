@@ -2,7 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
-void main(){
+void main() {
   runApp(LitaApp());
 }
 
@@ -13,25 +13,22 @@ class LitaApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text('Aplikasi Lita')),
-          backgroundColor: Colors.blue,
-          foregroundColor: Colors.white,
-        ),
-        body: ListView.builder( //gridview konsepnya sama
-          itemCount: 3, //batas / berapa banyak
-          itemBuilder: (context, index) => KotakWarna(
-            nama: 'Kotak ke - ${index+1}',
-            warna: Color.fromARGB(
-              255, 
-              150 + Random().nextInt(200), 
-              150 + Random().nextInt(200), 
-              150 + Random().nextInt(200), 
-            )
-          )
-        )
-      ),
+          appBar: AppBar(
+            title: Center(child: Text('Aplikasi Lita')),
+            backgroundColor: Colors.blue,
+            foregroundColor: Colors.white,
+          ),
+          body: ListView.builder(
+              //gridview konsepnya sama
+              // itemCount: 3, //batas / berapa banyak
+              itemBuilder: (context, index) => KotakWarna(
+                  nama: 'Kotak ke - ${index + 1}',
+                  warna: Color.fromARGB(
+                    255,
+                    100 + Random().nextInt(200),
+                    100 + Random().nextInt(200),
+                    100 + Random().nextInt(200),
+                  )))),
     );
   }
 }
@@ -54,9 +51,7 @@ class KotakWarna extends StatelessWidget {
       width: 200,
       height: 200,
       color: warna,
-      child: Center(
-        child: Text(nama)
-      ),
+      child: Center(child: Text(nama)),
     );
   }
 }
