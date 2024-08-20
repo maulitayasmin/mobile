@@ -10,17 +10,17 @@ class LitaApp extends StatelessWidget {
   LitaApp({super.key});
 
   //Berupa Widget
-  List<KotakWarna> allitems = List.generate(10,
-   (index) => KotakWarna(
-    nama: 'Kotak ke - ${index + 1}', 
-    warna: Color.fromARGB(
-      255, 
-      100 + Random().nextInt(256), 
-      100 + Random().nextInt(256), 
-      100 + Random().nextInt(256)
-      ),
-    ),
-);
+//   List<KotakWarna> allitems = List.generate(10,
+//    (index) => KotakWarna(
+//     nama: 'Kotak ke - ${index + 1}', 
+//     warna: Color.fromARGB(
+//       255, 
+//       100 + Random().nextInt(256), 
+//       100 + Random().nextInt(256), 
+//       100 + Random().nextInt(256)
+//       ),
+//     ),
+// );
 
   List<Map<String, dynamic>> data = List.generate(
     10, 
@@ -49,7 +49,13 @@ class LitaApp extends StatelessWidget {
           scrollDirection: Axis.vertical,
           child: Column(
             children: 
-              allitems, // kalau data mapping tidak bisa dimasukkan disini, karena dia list of maping bukan list of widget
+              data.map(
+                (e) => KotakWarna(
+                  nama: e['nama'], 
+                  warna: e['warna'],
+                  ),
+                  )
+                  .toList(), //harus dikasih toList()
               // KotakWarna(nama: 'Merah', warna: Colors.red,),
               // KotakWarna(nama: 'Kuning', warna: Colors.amber,),
               // KotakWarna(nama: 'Hijau', warna: Colors.green,),
