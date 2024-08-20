@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() {
+void main(){
   runApp(LitaApp());
 }
 
@@ -13,35 +13,88 @@ class LitaApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text('Lita App'),
-          ),
+            child: Text('Aplikasi Lita')),
           backgroundColor: Colors.blue,
+          foregroundColor: Colors.white,
         ),
-        body: GridView( //otomatis bisa scroll
-        padding: EdgeInsets.only(
-          top: 10,
-          left: 10,
-          right: 10,
-          bottom: 10
-        ),
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, //menyesuaikan jumlah kotak
-            crossAxisSpacing: 10, //jarak spasi kolom
-            mainAxisSpacing: 10, // jarak spasi baris
-            childAspectRatio: 1 / 2
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              KotakWarna(nama: 'Merah', warna: Colors.red,),
+              KotakWarna(nama: 'Kuning', warna: Colors.amber,),
+              KotakWarna(nama: 'Hijau', warna: Colors.green,),
+              KotakWarna(nama: 'Abu-abu', warna: Colors.grey,),
+              KotakWarna(nama: 'Pink', warna: Colors.pink,),
+
+              // Container(
+              //   width: 200,
+              //   height: 200,
+              //   color: Colors.amber,
+              //   child: Center(
+              //     child: Text('Kuning')
+              //   ),
+              // ),
+              // Container(
+              //   width: 200,
+              //   height: 200,
+              //   color: Colors.green,
+              //   child: Center(
+              //     child: Text('Hijau')
+              //   ),
+              // ),
+              // Container(
+              //   width: 200,
+              //   height: 200,
+              //   color: Colors.red,
+              //   child: Center(
+              //     child: Text('Merah')
+              //   ),
+              // ),
+              // Container(
+              //   width: 200,
+              //   height: 200,
+              //   color: Colors.amber,
+              //   child: Center(
+              //     child: Text('Kuning')
+              //   ),
+              // ),
+              // Container(
+              //   width: 200,
+              //   height: 200,
+              //   color: Colors.green,
+              //   child: Center(
+              //     child: Text('Hijau')
+              //   ),
+              // )
+            ],
           ),
-          children: [
-            Container( //jika container dikasi ukuran tidak ngefek
-              color: Colors.amber,
-            ),
-            Container(
-              color: Colors.red,
-            ),
-            Container(
-              color: Colors.green,
-            )
-          ],
-        )
+        ),
+      ),
+    );
+  }
+}
+
+//Ekstrak Widget --> reusable widget (bisa ditaruh di folder yang berbeda dalam 1 folder)
+class KotakWarna extends StatelessWidget {
+  const KotakWarna({
+    super.key,
+    required this.nama,
+    required this.warna,
+  });
+
+  // final String? nama; // artinya boleh null (?)
+  final String nama;
+  final Color warna;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 200,
+      height: 200,
+      color: warna,
+      child: Center(
+        child: Text(nama)
       ),
     );
   }
