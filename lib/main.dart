@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 void main(){
@@ -9,8 +11,14 @@ class LitaApp extends StatelessWidget {
 
   List<KotakWarna> allitems = List.generate(10,
    (index) => KotakWarna(
-    nama: 'Merah', 
-    warna: Colors.red,),
+    nama: 'Kotak ke - ${index + 1}', 
+    warna: Color.fromARGB(
+      255, 
+      Random().nextInt(256), 
+      Random().nextInt(256), 
+      Random().nextInt(256)
+      ),
+    ),
 );
 
   @override
