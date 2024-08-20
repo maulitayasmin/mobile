@@ -19,7 +19,7 @@ class LitaApp extends StatelessWidget {
           backgroundColor: Colors.blue,
           foregroundColor: Colors.white,
         ),
-        body: ListView.builder(
+        body: ListView.builder( //gridview konsepnya sama
           itemCount: 3, //batas / berapa banyak
           itemBuilder: (context, index) => KotakWarna(
             nama: 'Kotak ke - ${index+1}',
