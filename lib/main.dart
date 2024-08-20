@@ -9,14 +9,15 @@ void main(){
 class LitaApp extends StatelessWidget {
   LitaApp({super.key});
 
+  //Berupa Widget
   List<KotakWarna> allitems = List.generate(10,
    (index) => KotakWarna(
     nama: 'Kotak ke - ${index + 1}', 
     warna: Color.fromARGB(
       255, 
-      Random().nextInt(256), 
-      Random().nextInt(256), 
-      Random().nextInt(256)
+      100 + Random().nextInt(256), 
+      100 + Random().nextInt(256), 
+      100 + Random().nextInt(256)
       ),
     ),
 );
