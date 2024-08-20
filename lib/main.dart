@@ -22,16 +22,18 @@ class LitaApp extends StatelessWidget {
     ),
 );
 
-  List<Map<String, dynamic>> data = [
-    {
-      'nama' : 'Merah',
-      'warna' : Colors.red
-    },
-    {
-      'nama' : 'Hijau',
-      'warna' : Colors.green
-    },
-  ];
+  List<Map<String, dynamic>> data = List.generate(
+    10, 
+    (index) => {
+      'nama': 'Kotak ke - ${index + 1}',
+      'warna': Color.fromARGB(
+      255, 
+      100 + Random().nextInt(256), 
+      100 + Random().nextInt(256), 
+      100 + Random().nextInt(256)
+      ),
+    }
+  );
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class LitaApp extends StatelessWidget {
           scrollDirection: Axis.vertical,
           child: Column(
             children: 
-              allitems,
+              allitems, // kalau data mapping tidak bisa dimasukkan disini, karena dia list of maping bukan list of widget
               // KotakWarna(nama: 'Merah', warna: Colors.red,),
               // KotakWarna(nama: 'Kuning', warna: Colors.amber,),
               // KotakWarna(nama: 'Hijau', warna: Colors.green,),
