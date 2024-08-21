@@ -28,17 +28,18 @@ class Latihan6 extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: ClipOval(
-          child: Container(
-            color: Colors.blue[800],
-            height: 200,
-            width: 200,
-            child: Center(
-                child: Text(
-              'Hello',
-              style: TextStyle(fontSize: 25, color: Colors.white),
-            )),
-          ),
+        child: Container(
+          // color: Colors.blue[800],
+          height: 200,
+          width: 200,
+          decoration: BoxDecoration(
+              color: Colors.blue[800],
+              borderRadius: BorderRadius.circular(250 / 2)),
+          child: Center(
+              child: Text(
+            'Hello',
+            style: TextStyle(fontSize: 25, color: Colors.white),
+          )),
         ),
       ),
     );
