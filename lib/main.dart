@@ -13,6 +13,7 @@ import './latihan/latihan_9.dart';
 import './latihan/latihan_10.dart';
 import './latihan/latihan_11.dart';
 import './latihan/latihan_12.dart';
+import './latihan/latihan_13.dart';
 
 void main() {
   runApp(LitaApp());
@@ -23,6 +24,6 @@ class LitaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, home: Latihan12());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: Latihan13());
   }
 }
