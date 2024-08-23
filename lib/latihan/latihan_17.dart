@@ -24,38 +24,44 @@ class Latihan17 extends StatelessWidget {
             ),
           ],
         ),
-        body: GridView.builder(
+        body: ListView.builder(
+            padding: EdgeInsets.all(20),
             itemCount: 50,
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 3, mainAxisSpacing: 20, crossAxisSpacing: 20),
             itemBuilder: (context, index) {
               if (index % 2 == 0) {
-                return Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.blue[900],
-                  child: Center(
-                    child: Text(
-                      'Hello',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 100,
+                        color: Colors.blue[900],
                       ),
-                    ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Hello ${index + 1}',
+                        style: TextStyle(fontSize: 20),
+                      )
+                    ],
                   ),
                 );
               } else {
-                return Container(
-                  width: 100,
-                  height: 100,
-                  color: Colors.amber[200],
-                  child: Center(
-                    child: Text(
-                      'Hello',
-                      style: TextStyle(
-                        fontSize: 15,
+                return Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Container(
+                        height: 100,
+                        color: Colors.amber[200],
                       ),
-                    ),
+                      SizedBox(height: 10),
+                      Text(
+                        'Hello ${index + 1}',
+                        style: TextStyle(fontSize: 20),
+                      )
+                    ],
                   ),
                 );
               }
