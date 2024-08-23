@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+//soal 18
 class Latihan17 extends StatelessWidget {
   const Latihan17({super.key});
 
